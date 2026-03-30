@@ -94,3 +94,16 @@ Generated React Query hooks and fetch client from the OpenAPI spec (e.g. `useHea
 ### `scripts` (`@workspace/scripts`)
 
 Utility scripts package. Each script is a `.ts` file in `src/` with a corresponding npm script in `package.json`. Run scripts via `pnpm --filter @workspace/scripts run <script>`. Scripts can import any workspace package (e.g., `@workspace/db`) by adding it as a dependency in `scripts/package.json`.
+
+### `artifacts/panthers-bite` (`@workspace/panthers-bite`)
+
+Panther's Bite restaurant website. A premium dark-themed single-page React + Vite app.
+
+- Frontend-only (no backend), fully static after build
+- Sections: Hero, Navbar, Menu Preview, About, Signature Items, Reviews, Instagram Feed, Location, Footer
+- Floating WhatsApp + Order Now buttons; Order modal (Zomato / Swiggy)
+- AI-generated food imagery in `public/images/`
+- **Vercel deployment**: `artifacts/panthers-bite/vercel.json` configures build + SPA rewrites. Point Vercel root directory to `artifacts/panthers-bite`.
+- Build output: `dist/public/`
+- `pnpm --filter @workspace/panthers-bite run build` — production build (no env vars needed)
+- SEO: full Open Graph + Twitter Card meta tags in `index.html`
