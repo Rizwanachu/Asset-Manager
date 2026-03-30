@@ -2,24 +2,6 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { triggerOrderModal } from "@/hooks/use-order-modal";
 
-const floatingItems = [
-  {
-    src: "images/spicy-burger.png",
-    alt: "Spicy Burger",
-    className: "absolute top-[8%] right-[2%] w-[46%] max-w-[340px] z-20 drop-shadow-2xl"
-  },
-  {
-    src: "images/loaded-fries.png",
-    alt: "Loaded Fries",
-    className: "absolute top-[45%] right-[14%] w-[34%] max-w-[240px] z-10 drop-shadow-2xl opacity-90"
-  },
-  {
-    src: "images/classic-burger.png",
-    alt: "Classic Burger",
-    className: "absolute bottom-[5%] right-[0%] w-[38%] max-w-[280px] z-30 drop-shadow-2xl opacity-95"
-  }
-];
-
 export function Hero() {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
@@ -39,12 +21,7 @@ export function Hero() {
       </div>
       {/* Pink radial glow */}
       <div className="absolute inset-0 z-0 pointer-events-none section-pink-glow" />
-      {/* Extra concentrated glow on the right for food imagery */}
-      <div className="absolute right-0 top-0 w-1/2 h-full pointer-events-none z-0"
-        style={{ background: "radial-gradient(ellipse at 80% 40%, rgba(233,78,119,0.18) 0%, transparent 65%)" }} />
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center py-12 sm:py-0 min-h-screen">
-
-        {/* LEFT — Text content */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex items-center py-12 sm:py-0 min-h-screen">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
@@ -87,32 +64,6 @@ export function Hero() {
           </div>
         </motion.div>
 
-        {/* RIGHT — Layered food imagery (desktop only) */}
-        <div className="hidden lg:block relative h-screen pointer-events-none select-none">
-          {floatingItems.map((item, i) => (
-            <motion.img
-              key={item.src}
-              src={`${import.meta.env.BASE_URL}${item.src}`}
-              alt={item.alt}
-              loading="lazy"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{
-                opacity: 1,
-                y: [0, -12, 0],
-              }}
-              transition={{
-                opacity: { duration: 0.8, delay: 0.3 + i * 0.2 },
-                y: {
-                  duration: 3 + i * 0.8,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                  delay: i * 0.5
-                }
-              }}
-              className={item.className}
-            />
-          ))}
-        </div>
 
       </div>
     </section>
