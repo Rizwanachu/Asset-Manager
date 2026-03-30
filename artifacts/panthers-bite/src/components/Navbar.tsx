@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { triggerOrderModal } from "@/hooks/use-order-modal";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ThemeToggle";
-import { Menu, X, Flame } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export function Navbar() {
@@ -49,7 +49,6 @@ export function Navbar() {
           
           {/* Logo */}
           <a href="#home" onClick={(e) => handleNavClick(e, '#home')} className="flex items-center gap-2 group">
-            <Flame className="w-8 h-8 text-primary group-hover:scale-110 transition-transform duration-300" />
             <span className="font-display text-2xl tracking-widest text-foreground group-hover:text-primary transition-colors">
               PANTHER'S BITE
             </span>

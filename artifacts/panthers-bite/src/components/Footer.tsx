@@ -1,4 +1,4 @@
-import { Flame, Instagram } from "lucide-react";
+import { Instagram } from "lucide-react";
 
 export function Footer() {
   return (
@@ -9,7 +9,6 @@ export function Footer() {
           
           <div className="md:col-span-2">
             <div className="flex items-center gap-2 mb-6">
-              <Flame className="w-8 h-8 text-primary" />
               <span className="font-display text-3xl tracking-widest text-foreground">
                 PANTHER'S BITE
               </span>
