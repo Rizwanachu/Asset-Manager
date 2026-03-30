@@ -50,12 +50,10 @@ export default defineConfig(async () => {
     },
     root: path.resolve(import.meta.dirname),
     build: {
-      // On Vercel (VERCEL=1) write straight to the repo-root "vercel-output"
-      // folder so the outputDirectory in vercel.json resolves correctly.
-      // Locally stay with the conventional "dist" path.
-      outDir: process.env.VERCEL
-        ? path.resolve(import.meta.dirname, "../../vercel-output")
-        : "dist",
+      // "dist" is gitignored so Vercel can't serve it.
+      // Use "web-dist" on Vercel (not gitignored, stays inside this package dir).
+      // Keep "dist" for local dev.
+      outDir: process.env.VERCEL ? "web-dist" : "dist",
       emptyOutDir: true,
     },
     server: {
