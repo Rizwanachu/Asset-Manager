@@ -37,13 +37,11 @@ export function Hero() {
           className="w-full h-full object-cover object-center sm:object-right opacity-20 sm:opacity-40"
         />
       </div>
-
       {/* Pink radial glow */}
       <div className="absolute inset-0 z-0 pointer-events-none section-pink-glow" />
       {/* Extra concentrated glow on the right for food imagery */}
       <div className="absolute right-0 top-0 w-1/2 h-full pointer-events-none z-0"
         style={{ background: "radial-gradient(ellipse at 80% 40%, rgba(233,78,119,0.18) 0%, transparent 65%)" }} />
-
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center py-12 sm:py-0 min-h-screen">
 
         {/* LEFT — Text content */}
@@ -65,9 +63,7 @@ export function Hero() {
             Warning: seriously addictive food
           </p>
 
-          <p className="text-base sm:text-lg lg:text-xl text-muted-foreground mb-8 sm:mb-10 max-w-lg mx-auto sm:mx-0 font-medium leading-relaxed">
-            Loaded fries, crazy combos, juicy burgers and late-night cravings — all in one place.
-          </p>
+          <p className="text-base sm:text-lg lg:text-xl text-muted-foreground mb-8 sm:mb-10 max-w-lg mx-auto sm:mx-0 font-medium leading-relaxed">Loaded fries, crazy combos, juicy burgers and late night cravings - all in one place.</p>
 
           <div className="flex flex-wrap gap-4 justify-center sm:justify-start">
             <Button size="lg" onClick={triggerOrderModal}>
