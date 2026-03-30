@@ -7,19 +7,16 @@ export function Hero() {
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Background & gradient overlays */}
       <div className="absolute inset-0 z-0">
-        {/* Mobile: gentle top + bottom fades so the image shows through */}
-        <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-transparent to-background/60 z-10 sm:hidden" />
-        {/* Desktop: strong left-to-right fade so text stays readable */}
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-background/30 z-10 hidden sm:block" />
-        {/* Bottom fade on all breakpoints */}
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-background/30 z-10" />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent z-10" />
+        <div className="absolute inset-0 bg-background/60 sm:bg-transparent z-10" />
         <motion.img
           initial={{ scale: 1.1 }}
           animate={{ scale: 1 }}
           transition={{ duration: 1.5, ease: "easeOut" }}
           src={`${import.meta.env.BASE_URL}images/hero-bg.png`}
           alt="Panther's Bite"
-          className="w-full h-full object-cover object-center sm:object-right opacity-50 sm:opacity-40"
+          className="w-full h-full object-cover object-center sm:object-right opacity-20 sm:opacity-40"
         />
       </div>
       {/* Pink radial glow */}
