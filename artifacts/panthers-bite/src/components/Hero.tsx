@@ -27,11 +27,11 @@ export function Hero() {
           className="max-w-2xl"
         >
           <div className="inline-block px-4 py-1.5 rounded-full bg-white/5 border border-white/10 mb-6 backdrop-blur-sm">
-            <span className="text-pink-300 font-bold tracking-widest text-sm uppercase">Kochi's Hardest Hitting Burgers</span>
+            <span className="text-primary font-bold tracking-widest text-sm uppercase">Kochi's Hardest Hitting Burgers</span>
           </div>
           
           <h1 className="text-6xl sm:text-7xl lg:text-8xl font-display uppercase leading-[0.9] mb-6 text-glow">
-            Unleash Your <span className="text-pink-300 block mt-2">Hunger.</span>
+            Unleash Your <span className="text-primary block mt-2">Hunger.</span>
           </h1>
           
           <p className="text-lg sm:text-xl text-muted-foreground mb-10 max-w-lg font-medium leading-relaxed">
@@ -53,7 +53,7 @@ export function Hero() {
               Open till 12 AM
             </div>
             <div className="flex items-center gap-2">
-              <span className="text-pink-300">★</span> 4.9 on Zomato
+              <span className="text-primary">★</span> 4.9 on Zomato
             </div>
           </div>
         </motion.div>
