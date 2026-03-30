@@ -28,7 +28,7 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="max-w-2xl text-center sm:text-left mx-auto sm:mx-0 pb-10 lg:pb-0"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-[#E94E77]/30 mb-4 sm:mb-6 backdrop-blur-sm mt-[20px]">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-[#E94E77]/30 mb-4 sm:mb-6 backdrop-blur-sm mt-[15px]">
             <span className="text-primary font-bold tracking-widest text-xs sm:text-sm uppercase">Kochi's go-to fast food spot</span>
           </div>
 
