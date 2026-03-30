@@ -69,7 +69,7 @@ export function Location() {
             
             {/* Placeholder map using a dark theme Google Maps iframe embed */}
             <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.585721867168!2d76.2995!3d9.9685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOcKwNTgnMDYuNiJOIDc2wrAxNyc1OC4yIkU!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.839666665538!2d76.29559777450797!3d9.947294873940491!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b08732e4bcbe105%3A0xc4908f4bd595f177!2sPanther&#39;s%20Bite!5e0!3m2!1sen!2sin!4v1774903479779!5m2!1sen!2sin" 
               width="100%" 
               height="100%" 
               style={{ border: 0, filter: 'invert(90%) hue-rotate(180deg) contrast(120%)' }} 
@@ -82,7 +82,7 @@ export function Location() {
             <div className="absolute bottom-4 left-4 right-4 bg-background/90 backdrop-blur-md p-4 rounded-xl border border-white/10 z-20 flex justify-between items-center pointer-events-auto">
               <span className="font-bold text-sm uppercase tracking-wider">Get Directions</span>
               <a 
-                href="https://maps.google.com/?q=Kochi,Kerala" 
+                href="https://maps.google.com/?q=Panther's+Bite,Cheriyakadavanthra,Kochi" 
                 target="_blank" 
                 rel="noreferrer"
                 className="w-10 h-10 bg-primary text-black rounded-lg flex items-center justify-center hover:scale-105 transition-transform"
