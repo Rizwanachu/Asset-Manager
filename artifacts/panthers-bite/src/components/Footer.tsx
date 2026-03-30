@@ -45,7 +45,7 @@ export function Footer() {
             <ul className="space-y-4">
               <li className="text-muted-foreground">Urban Flavour Food Street,<br/>Cheriyakadavanthra</li>
               <li><a href="tel:+919947178091" className="text-muted-foreground hover:text-primary transition-colors">+91 99471 78091</a></li>
-              <li className="text-muted-foreground mt-4">Daily: 12 PM - 12 AM</li>
+              <li className="text-muted-foreground mt-4">Daily: 4 PM - 12 AM</li>
             </ul>
           </div>
 
