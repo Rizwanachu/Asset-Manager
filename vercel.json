@@ -1,6 +1,6 @@
 {
   "buildCommand": "pnpm --filter @workspace/panthers-bite run build",
-  "outputDirectory": "artifacts/panthers-bite/web-dist",
+  "outputDirectory": "web-dist",
   "installCommand": "pnpm install",
   "framework": null,
   "rewrites": [
