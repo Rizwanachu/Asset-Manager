@@ -1,14 +1,13 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 
-// Using Unsplash placeholder images matching the dark food vibe
 const feedImages = [
-  "https://images.unsplash.com/photo-1550547660-d9450f859349?w=800&h=800&fit=crop", // Dark burger
-  "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=800&h=800&fit=crop", // Burger top down
-  "https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?w=800&h=800&fit=crop", // Fries
-  "https://images.unsplash.com/photo-1594212691516-436f54c9351e?w=800&h=800&fit=crop", // Wrap/roll
-  "https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=800&h=800&fit=crop", // Burger side
-  "https://images.unsplash.com/photo-1625938144755-652e08e359b7?w=800&h=800&fit=crop", // Detail shot
+  { src: "/images/classic-burger.png", label: "Classic Smash" },
+  { src: "/images/spicy-burger.png", label: "Spicy 2X" },
+  { src: "/images/loaded-fries.png", label: "Loaded Fries" },
+  { src: "/images/classic-burger.png", label: "Smash Stack" },
+  { src: "/images/spicy-burger.png", label: "Fire Burger" },
+  { src: "/images/loaded-fries.png", label: "Cheese Fries" },
 ];
 
 export function InstagramFeed() {
@@ -27,7 +26,7 @@ export function InstagramFeed() {
         </motion.div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-4 mb-12">
-          {feedImages.map((src, idx) => (
+          {feedImages.map((item, idx) => (
             <motion.a
               key={idx}
               href="https://www.instagram.com/panthersbite/"
@@ -40,8 +39,8 @@ export function InstagramFeed() {
               className="relative aspect-square overflow-hidden group block bg-secondary rounded-xl"
             >
               <img 
-                src={src} 
-                alt="Instagram feed item" 
+                src={item.src}
+                alt={item.label}
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
