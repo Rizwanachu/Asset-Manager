@@ -9,6 +9,14 @@ export function Hero() {
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent z-10" />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent z-10" />
+        {/* Pink colour tint — preserves all shading, only shifts the warm amber hue to light pink */}
+        <div
+          className="absolute inset-0 z-[5]"
+          style={{
+            background: "radial-gradient(ellipse at 72% 50%, rgba(220,130,175,0.72) 0%, transparent 65%)",
+            mixBlendMode: "color",
+          }}
+        />
         <motion.img
           initial={{ scale: 1.1 }}
           animate={{ scale: 1 }}
