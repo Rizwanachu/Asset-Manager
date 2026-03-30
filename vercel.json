@@ -1,6 +1,5 @@
 {
-  "buildCommand": "pnpm --filter @workspace/panthers-bite run build",
-  "outputDirectory": "web-dist",
+  "buildCommand": "pnpm -w run vercel-build",
   "installCommand": "pnpm install",
   "framework": null,
   "rewrites": [

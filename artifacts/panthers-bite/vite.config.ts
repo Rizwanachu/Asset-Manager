@@ -50,10 +50,7 @@ export default defineConfig(async () => {
     },
     root: path.resolve(import.meta.dirname),
     build: {
-      // "dist" is gitignored so Vercel can't serve it.
-      // Use "web-dist" on Vercel (not gitignored, stays inside this package dir).
-      // Keep "dist" for local dev.
-      outDir: process.env.VERCEL ? "web-dist" : "dist",
+      outDir: "dist",
       emptyOutDir: true,
     },
     server: {
