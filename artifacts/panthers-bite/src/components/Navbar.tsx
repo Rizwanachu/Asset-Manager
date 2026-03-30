@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { triggerOrderModal } from "@/hooks/use-order-modal";
-import { Button } from "@/components/ui/Button";
+import { Button } from "@/components/ui/button";
 import { Menu, X, Flame } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
