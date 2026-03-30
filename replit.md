@@ -103,7 +103,12 @@ Panther's Bite restaurant website. A premium dark-themed single-page React + Vit
 - Sections: Hero, Navbar, Menu Preview, About, Signature Items, Reviews, Instagram Feed, Location, Footer
 - Floating WhatsApp + Order Now buttons; Order modal (Zomato / Swiggy)
 - AI-generated food imagery in `public/images/`
-- **Vercel deployment**: `artifacts/panthers-bite/vercel.json` configures build + SPA rewrites. Point Vercel root directory to `artifacts/panthers-bite`.
-- Build output: `dist/public/`
+- **Replit deployment**: served at `/` via the `Start application` workflow (`PORT=18766 pnpm --filter @workspace/panthers-bite run dev`)
+- Build output: `dist/`
 - `pnpm --filter @workspace/panthers-bite run build` — production build (no env vars needed)
 - SEO: full Open Graph + Twitter Card meta tags in `index.html`
+
+## Workflows
+
+- `Start application` — Panther's Bite frontend (Vite dev server, port 18766, webview)
+- `API Server` — Express API server (port 8080, console)
