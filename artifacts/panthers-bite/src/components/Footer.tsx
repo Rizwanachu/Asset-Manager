@@ -1,4 +1,4 @@
-import { Flame, Instagram, Facebook } from "lucide-react";
+import { Flame, Instagram } from "lucide-react";
 
 export function Footer() {
   return (
@@ -18,11 +18,8 @@ export function Footer() {
               Kochi's premier destination for bold, unapologetic American-style fast food. Smashed burgers, loaded fries, and intense flavors.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center text-foreground hover:bg-primary hover:text-black transition-colors">
+              <a href="https://www.instagram.com/panthersbite/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center text-foreground hover:bg-primary hover:text-black transition-colors">
                 <Instagram className="w-5 h-5" />
-              </a>
-              <a href="#" className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center text-foreground hover:bg-primary hover:text-black transition-colors">
-                <Facebook className="w-5 h-5" />
               </a>
               <a href="https://www.zomato.com/kochi/panthers-bite-thevara" target="_blank" rel="noopener noreferrer" className="h-12 px-4 rounded-full bg-secondary flex items-center justify-center text-sm font-bold uppercase tracking-wider text-foreground hover:bg-red-500 transition-colors">
                 Zomato
