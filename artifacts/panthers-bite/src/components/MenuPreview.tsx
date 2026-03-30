@@ -1,34 +1,47 @@
 import { motion } from "framer-motion";
-import { Flame, Utensils, Zap } from "lucide-react";
+import { Flame, Utensils, Drumstick, Layers, Gift } from "lucide-react";
 
 const categories = [
   {
     id: "burgers",
-    title: "Smashed Burgers",
-    description: "Double beef, crispy edges, melted cheese, and our signature panther sauce.",
-    icon: <Flame className="w-10 h-10 text-primary" />,
+    title: "Signature Burgers",
+    description: "Double-smashed, cheese-pulled, sauce-dripping burgers built for real hunger.",
+    icon: <Flame className="w-9 h-9 text-primary" />,
     microcopy: "The one that started it all"
-  },
-  {
-    id: "wraps",
-    title: "Bold Wraps",
-    description: "Crispy chicken or tender paneer wrapped tight with intense flavors and crunch.",
-    icon: <Zap className="w-10 h-10 text-primary" />,
-    microcopy: "Crispy. Messy. Perfect."
   },
   {
     id: "fries",
     title: "Loaded Fries",
-    description: "A mountain of fries drowned in cheese, meats, and unapologetic toppings.",
-    icon: <Utensils className="w-10 h-10 text-primary" />,
+    description: "Crinkle cuts buried under molten cheese, meats, and sauces. Not diet food.",
+    icon: <Utensils className="w-9 h-9 text-primary" />,
     microcopy: "You will not share these"
+  },
+  {
+    id: "chicken",
+    title: "Chicken Specials",
+    description: "Crispy, juicy, fiery — chicken done the Panther's way.",
+    icon: <Drumstick className="w-9 h-9 text-primary" />,
+    microcopy: "Crispy. Saucy. Built for real hunger"
+  },
+  {
+    id: "wraps",
+    title: "Wraps & Snacks",
+    description: "Stuffed wraps, bites, and snacks that hit hard every single time.",
+    icon: <Layers className="w-9 h-9 text-primary" />,
+    microcopy: "Crispy. Messy. Perfect."
+  },
+  {
+    id: "combos",
+    title: "Combos & Meals",
+    description: "More food, better value. Full meals built for maximum cravings.",
+    icon: <Gift className="w-9 h-9 text-primary" />,
+    microcopy: "Messy. Loaded. Worth it."
   }
 ];
 
 export function MenuPreview() {
   return (
     <section id="menu" className="py-16 sm:py-24 bg-background relative">
-      {/* Pink section glow */}
       <div className="absolute inset-0 pointer-events-none section-pink-glow opacity-60" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
@@ -43,25 +56,26 @@ export function MenuPreview() {
           <div className="w-24 h-1.5 bg-gradient-to-r from-[#E94E77] to-[#FF8FB1] mx-auto rounded-full" />
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+        {/* First row: 3 cards */}
+        <div className="flex flex-wrap justify-center gap-6 sm:gap-8">
           {categories.map((category, index) => (
             <motion.div
               key={category.id}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className="glass-panel p-6 sm:p-8 rounded-3xl group hover:border-[#E94E77]/50 transition-all duration-300 hover:-translate-y-2 box-glow cursor-pointer"
+              transition={{ delay: index * 0.08 }}
+              className="w-full sm:w-[calc(50%-16px)] lg:w-[calc(33.333%-22px)] glass-panel p-6 sm:p-8 rounded-3xl group hover:border-[#E94E77]/50 transition-all duration-300 hover:-translate-y-2 box-glow cursor-pointer"
               onClick={() => document.getElementById('signature')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-secondary flex items-center justify-center mb-5 sm:mb-6 group-hover:bg-[#E94E77]/10 transition-colors">
+              <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-secondary flex items-center justify-center mb-5 group-hover:bg-[#E94E77]/10 transition-colors">
                 {category.icon}
               </div>
-              <h3 className="text-2xl sm:text-3xl font-display mb-2 sm:mb-3">{category.title}</h3>
-              <p className="text-muted-foreground leading-relaxed text-sm sm:text-base mb-3">
+              <h3 className="text-xl sm:text-2xl font-display mb-2">{category.title}</h3>
+              <p className="text-muted-foreground leading-relaxed text-sm mb-3">
                 {category.description}
               </p>
-              <p className="text-xs text-primary/70 font-semibold mb-4">{category.microcopy}</p>
+              <p className="text-xs text-primary/70 font-semibold mb-4 italic">{category.microcopy}</p>
               <div className="flex items-center text-primary font-bold uppercase tracking-wider text-sm group-hover:translate-x-2 transition-transform">
                 Explore <span className="ml-2">→</span>
               </div>

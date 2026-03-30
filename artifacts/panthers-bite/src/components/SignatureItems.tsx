@@ -6,26 +6,34 @@ const items = [
   {
     id: "spicy-2x",
     name: "Spicy 2X Burger",
-    description: "Double smashed patties, melted pepper jack, fresh jalapeños, and our blazing hot panther sauce on a toasted brioche.",
+    description: "Loaded, messy, and impossible to ignore. Double-smashed beef, pepper jack, jalapeños, and blazing panther sauce on a toasted brioche.",
     image: "images/spicy-burger.png",
     price: "₹349",
     tag: "Most ordered"
   },
   {
-    id: "classic-smash",
-    name: "Classic Panther Smash",
-    description: "The OG. Double beef, double american cheese, house pickles, diced onions, and classic sauce. Pure perfection.",
-    image: "images/classic-burger.png",
-    price: "₹299",
-    tag: "The original"
-  },
-  {
     id: "beast-fries",
     name: "Loaded Beast Fries",
-    description: "A ridiculous portion of crinkle cuts absolutely buried in molten cheese sauce, seasoned ground beef, and scallions.",
+    description: "Not diet food. Not sorry. A mountain of crinkle cuts drowned in molten cheese, seasoned beef, and house sauces.",
     image: "images/loaded-fries.png",
     price: "₹249",
     tag: "No sharing allowed"
+  },
+  {
+    id: "crispy-chicken",
+    name: "Crispy Chicken Special",
+    description: "Crispy, saucy, and built for real hunger. Juicy fried chicken loaded with our signature crunch coating and fiery dip.",
+    image: "images/classic-burger.png",
+    price: "₹279",
+    tag: "Fan favourite"
+  },
+  {
+    id: "panther-combo",
+    name: "Panther Combo Meal",
+    description: "Built for cravings. A burger, loaded fries, and a drink — the full Panther's Bite experience in one killer deal.",
+    image: "images/loaded-fries.png",
+    price: "₹499",
+    tag: "Best value"
   }
 ];
 
@@ -70,13 +78,13 @@ export function SignatureItems() {
                 <span className="inline-block text-xs font-bold uppercase tracking-widest text-primary/80 bg-[#E94E77]/10 border border-[#E94E77]/20 px-3 py-1 rounded-full mb-3">
                   {item.tag}
                 </span>
-                <div className="text-primary font-display text-xl sm:text-2xl mb-2">{item.price}</div>
+                <div className="text-3xl sm:text-4xl font-display text-primary mb-2">{item.price}</div>
                 <h3 className="text-3xl sm:text-4xl md:text-5xl font-display text-foreground mb-4 uppercase">{item.name}</h3>
                 <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-6 sm:mb-8 max-w-lg mx-auto md:mx-0">
                   {item.description}
                 </p>
                 <Button onClick={triggerOrderModal}>
-                  Add to Order
+                  Order Now
                 </Button>
               </div>
             </motion.div>

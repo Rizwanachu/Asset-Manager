@@ -1,0 +1,221 @@
+Act as a senior frontend engineer and UI/UX designer.
+
+You are given an existing Next.js + Tailwind CSS restaurant website for a brand called "Panther's Bite".
+
+Your task is to UPGRADE the existing website (do NOT rebuild from scratch). Keep the current structure, layout, and components, but improve branding, accuracy, and conversion.
+
+------------------------------------------------
+
+1. BRAND CORRECTION (VERY IMPORTANT)
+
+The current website incorrectly presents Panther's Bite as a burger-only premium dark brand.
+
+Update the brand positioning to:
+
+"Kochi’s go-to spot for loaded fast food, burgers, fries, chicken, and combos."
+
+Brand personality:
+- Fun
+- Youthful
+- Craving-driven
+- Instagram-friendly
+- Slightly bold but not aggressive
+
+Color system:
+- Keep dark base but soften it:
+  - Background: #0F0F0F instead of pure black
+  - Secondary: #1A1A1A
+- Primary accent: #E94E77 (pink from logo)
+- Gradient accent: #E94E77 → #FF8FB1
+- Text: white and light gray
+
+Apply accent color consistently to:
+- Buttons
+- Highlights
+- Prices
+- Section dividers
+- Hover states
+
+------------------------------------------------
+
+2. HERO SECTION UPDATE
+
+Keep layout and background image.
+
+Update text content:
+
+Heading:
+"Unleash Your Hunger"
+
+Subheading:
+"Loaded fries, crazy combos, juicy burgers and late-night cravings — all in one place."
+
+Primary CTA:
+"Order Now"
+
+Secondary CTA:
+"Visit Us"
+
+Enhancements:
+- Add subtle pink glow overlay
+- Improve button styling with gradient (#E94E77 → #FF8FB1)
+- Add small text: "Open till 12 AM"
+
+------------------------------------------------
+
+3. MENU SECTION (STRUCTURE FIX)
+
+Keep existing card layout, but change categories to reflect real offerings:
+
+Replace current categories with:
+
+- Signature Burgers
+- Loaded Fries
+- Chicken Specials
+- Wraps and Snacks
+- Combos and Meals
+
+Each card should:
+- Have a short, punchy description
+- Include hover animation
+- Use pink accent on icons or borders
+
+------------------------------------------------
+
+4. SIGNATURE ITEMS SECTION (VARIETY FIX)
+
+Do NOT show only burgers.
+
+Update items to include a mix:
+- 1 burger
+- 1 loaded fries item
+- 1 chicken item
+- 1 combo meal
+
+Update descriptions to feel more craving-driven, for example:
+"Loaded, messy, and impossible to ignore"
+"Crispy, saucy, and built for real hunger"
+
+Make prices:
+- Larger
+- Bold
+- Colored with accent (#E94E77)
+
+------------------------------------------------
+
+5. ADD NEW SECTION: "BEST COMBOS"
+
+Create a new section between Menu and Reviews:
+
+Title:
+"Best Combos"
+
+Display 3–4 combo cards:
+- Combo name
+- Short description
+- Price
+- "Order Now" button
+
+Design:
+- Same card style as menu
+- Slight glow effect on hover
+
+------------------------------------------------
+
+6. COPYWRITING UPGRADE
+
+Replace overly formal or generic text with short, punchy, craving-focused lines.
+
+Examples of tone:
+- "Messy. Loaded. Worth it."
+- "Not diet food. Not sorry."
+- "Built for cravings."
+
+Apply this tone across:
+- Menu descriptions
+- Section headings
+- Buttons
+
+------------------------------------------------
+
+7. REVIEWS SECTION
+
+Enhance current slider:
+
+- Add reviewer names
+- Show star rating (4.9 style)
+- Add small label: "Loved by Kochi"
+
+Keep animation smooth.
+
+------------------------------------------------
+
+8. INSTAGRAM SECTION
+
+Keep grid layout but improve engagement:
+
+- Add hover effect (zoom + overlay)
+- Overlay text: "View on Instagram"
+- Add heading:
+"Follow Our Vibe"
+
+Keep link to Instagram:
+https://www.instagram.com/panthersbite/
+
+------------------------------------------------
+
+9. FLOATING CTA IMPROVEMENT
+
+Enhance floating "Order Now" button:
+
+- Make it slightly larger
+- Add subtle pulse animation
+- Use pink gradient
+
+On click:
+Open modal with:
+- "Order via Zomato"
+- "Order via Swiggy"
+
+------------------------------------------------
+
+10. FOOTER IMPROVEMENT
+
+Add clear action buttons:
+- "Order on Zomato"
+- "Order on Swiggy"
+
+Make them visually prominent using accent color.
+
+Keep:
+- Address
+- Phone number
+- Opening hours
+
+------------------------------------------------
+
+11. MICRO-INTERACTIONS
+
+Add subtle animations:
+- Fade-in on scroll
+- Hover scale on cards
+- Button hover glow
+
+Keep performance optimized.
+
+------------------------------------------------
+
+12. PERFORMANCE + CLEANUP
+
+- Do not break existing structure
+- Keep components reusable
+- Optimize images
+- Maintain responsiveness
+
+------------------------------------------------
+
+FINAL GOAL:
+
+Transform the website from a burger-focused dark theme into a high-converting, visually engaging fast food brand site that reflects variety, cravings, and real menu offerings.
+
+Make it feel like a premium, modern restaurant website built by a top agency.

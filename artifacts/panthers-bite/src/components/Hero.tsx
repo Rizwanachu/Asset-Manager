@@ -44,7 +44,7 @@ export function Hero() {
           </p>
 
           <p className="text-base sm:text-lg lg:text-xl text-muted-foreground mb-8 sm:mb-10 max-w-lg mx-auto sm:mx-0 font-medium leading-relaxed">
-            Signature smashed burgers, dangerously loaded fries, and bold American flavors that refuse to apologize.
+            Loaded fries, crazy combos, juicy burgers and late-night cravings — all in one place.
           </p>
 
           <div className="flex flex-wrap gap-4 justify-center sm:justify-start">
