@@ -29,7 +29,6 @@ export function Reviews() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0);
 
-  // Auto-advance
   useEffect(() => {
     const timer = setInterval(() => {
       setDirection(1);
@@ -50,7 +49,7 @@ export function Reviews() {
 
   const variants = {
     enter: (direction: number) => ({
-      x: direction > 0 ? 1000 : -1000,
+      x: direction > 0 ? 300 : -300,
       opacity: 0
     }),
     center: {
@@ -60,20 +59,20 @@ export function Reviews() {
     },
     exit: (direction: number) => ({
       zIndex: 0,
-      x: direction < 0 ? 1000 : -1000,
+      x: direction < 0 ? 300 : -300,
       opacity: 0
     })
   };
 
   return (
-    <section id="reviews" className="py-24 bg-secondary/50 border-y border-white/5 overflow-hidden">
+    <section id="reviews" className="py-16 sm:py-24 bg-secondary/50 border-y border-white/5 overflow-hidden">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
-        
-        <Quote className="w-16 h-16 text-primary/20 mx-auto mb-8" />
-        
-        <h2 className="text-4xl md:text-5xl font-display text-foreground mb-12">What They Say</h2>
 
-        <div className="relative h-[250px] md:h-[200px] flex items-center justify-center">
+        <Quote className="w-12 h-12 sm:w-16 sm:h-16 text-primary/20 mx-auto mb-6 sm:mb-8" />
+
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-display text-foreground mb-10 sm:mb-12">What They Say</h2>
+
+        <div className="relative min-h-[220px] sm:min-h-[200px] flex items-center justify-center">
           <AnimatePresence initial={false} custom={direction} mode="wait">
             <motion.div
               key={currentIndex}
@@ -83,14 +82,14 @@ export function Reviews() {
               animate="center"
               exit="exit"
               transition={{ x: { type: "spring", stiffness: 300, damping: 30 }, opacity: { duration: 0.2 } }}
-              className="absolute w-full px-12"
+              className="absolute w-full px-4 sm:px-12"
             >
-              <div className="flex justify-center gap-1 mb-6">
+              <div className="flex justify-center gap-1 mb-4 sm:mb-6">
                 {[...Array(5)].map((_, i) => (
-                  <span key={i} className="text-primary text-2xl">★</span>
+                  <span key={i} className="text-primary text-xl sm:text-2xl">★</span>
                 ))}
               </div>
-              <p className="text-xl md:text-2xl text-foreground font-medium italic mb-6 leading-relaxed">
+              <p className="text-lg sm:text-xl md:text-2xl text-foreground font-medium italic mb-4 sm:mb-6 leading-relaxed">
                 "{reviews[currentIndex].text}"
               </p>
               <p className="text-primary font-display tracking-widest uppercase">
@@ -102,13 +101,13 @@ export function Reviews() {
 
         {/* Controls */}
         <div className="flex items-center justify-center gap-6 mt-8">
-          <button 
+          <button
             onClick={handlePrev}
-            className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-muted-foreground hover:bg-white/5 hover:text-primary transition-all"
+            className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-white/10 flex items-center justify-center text-muted-foreground hover:bg-white/5 hover:text-primary transition-all"
           >
-            <ChevronLeft className="w-6 h-6" />
+            <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
           </button>
-          
+
           <div className="flex gap-2">
             {reviews.map((_, idx) => (
               <button
@@ -117,18 +116,18 @@ export function Reviews() {
                   setDirection(idx > currentIndex ? 1 : -1);
                   setCurrentIndex(idx);
                 }}
-                className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                  idx === currentIndex ? 'w-8 bg-primary' : 'bg-white/20'
+                className={`h-2 rounded-full transition-all duration-300 ${
+                  idx === currentIndex ? 'w-8 bg-primary' : 'w-2 bg-white/20'
                 }`}
               />
             ))}
           </div>
 
-          <button 
+          <button
             onClick={handleNext}
-            className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-muted-foreground hover:bg-white/5 hover:text-primary transition-all"
+            className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-white/10 flex items-center justify-center text-muted-foreground hover:bg-white/5 hover:text-primary transition-all"
           >
-            <ChevronRight className="w-6 h-6" />
+            <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
           </button>
         </div>
 

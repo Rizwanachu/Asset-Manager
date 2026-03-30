@@ -3,19 +3,19 @@ import logoImg from "@assets/587607695_17853646149595354_2885004091992565856_n_(
 
 export function Footer() {
   return (
-    <footer className="bg-background pt-20 pb-10 border-t border-white/10">
+    <footer className="bg-background pt-16 sm:pt-20 pb-10 border-t border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
-          
-          <div className="md:col-span-2">
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-12 mb-12 sm:mb-16">
+
+          <div className="sm:col-span-2">
             <div className="flex items-center mb-6">
-              <img src={logoImg} alt="Panther's Bite" className="h-24 w-auto object-contain" />
+              <img src={logoImg} alt="Panther's Bite" className="h-20 sm:h-24 w-auto object-contain" />
             </div>
             <p className="text-muted-foreground max-w-sm leading-relaxed mb-8">
               Kochi's premier destination for bold, unapologetic American-style fast food. Smashed burgers, loaded fries, and intense flavors.
             </p>
-            <div className="flex gap-4">
+            <div className="flex flex-wrap gap-3">
               <a href="https://www.instagram.com/panthersbite/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center text-foreground hover:bg-primary hover:text-black transition-colors">
                 <Instagram className="w-5 h-5" />
               </a>
@@ -49,7 +49,7 @@ export function Footer() {
 
         </div>
 
-        <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
+        <div className="border-t border-white/5 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
           <p>© {new Date().getFullYear()} Panther's Bite. All rights reserved.</p>
           <div className="flex gap-6">
             <a href="#" className="hover:text-foreground transition-colors">Privacy Policy</a>
