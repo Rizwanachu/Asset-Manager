@@ -39,7 +39,7 @@ export function Location() {
                   <h4 className="text-xl font-display uppercase mb-2">Hours</h4>
                   <p className="text-muted-foreground">
                     Monday - Sunday<br/>
-                    <span className="text-foreground font-bold">12:00 PM - 12:00 AM</span>
+                    <span className="text-foreground font-bold">4:00 PM - 12:00 AM</span>
                   </p>
                 </div>
               </div>
