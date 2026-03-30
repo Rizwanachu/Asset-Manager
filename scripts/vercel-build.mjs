@@ -1,35 +1,23 @@
 import { execSync } from "child_process";
-import { cpSync, mkdirSync, writeFileSync, rmSync, existsSync } from "fs";
+import { cpSync, mkdirSync, rmSync, existsSync } from "fs";
 import { fileURLToPath } from "url";
 import path from "path";
 
 const scriptDir = path.dirname(fileURLToPath(import.meta.url));
 const repoRoot = path.resolve(scriptDir, "..");
 const distDir = path.join(repoRoot, "artifacts", "panthers-bite", "dist");
-const vercelOutput = "/vercel/output";
-const staticDir = path.join(vercelOutput, "static");
+const outputDir = path.join(repoRoot, "public");
 
 console.log("Repo root:", repoRoot);
+console.log("Output dir:", outputDir);
 
 execSync("pnpm --filter @workspace/panthers-bite run build", {
   stdio: "inherit",
   cwd: repoRoot,
 });
 
-console.log("Copying to Build Output API:", staticDir);
-if (existsSync(staticDir)) rmSync(staticDir, { recursive: true });
-mkdirSync(staticDir, { recursive: true });
-cpSync(distDir, staticDir, { recursive: true });
+if (existsSync(outputDir)) rmSync(outputDir, { recursive: true });
+mkdirSync(outputDir, { recursive: true });
+cpSync(distDir, outputDir, { recursive: true });
 
-writeFileSync(
-  path.join(vercelOutput, "config.json"),
-  JSON.stringify({
-    version: 3,
-    routes: [
-      { handle: "filesystem" },
-      { src: "/(.*)", dest: "/index.html" },
-    ],
-  }),
-);
-
-console.log("Done. Files in:", staticDir);
+console.log("Done. Files copied to:", outputDir);
