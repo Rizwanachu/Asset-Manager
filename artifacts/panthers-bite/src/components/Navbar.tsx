@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { triggerOrderModal } from "@/hooks/use-order-modal";
 import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import { Menu, X, Flame } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -41,7 +42,7 @@ export function Navbar() {
     <>
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled ? "bg-background/90 backdrop-blur-md border-b border-white/5 py-3" : "bg-transparent py-5"
+          isScrolled ? "bg-background/90 backdrop-blur-md border-b border-border py-3" : "bg-transparent py-5"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
@@ -69,18 +70,22 @@ export function Navbar() {
                 </li>
               ))}
             </ul>
-            <Button onClick={triggerOrderModal} className="ml-4">
+            <ThemeToggle />
+            <Button onClick={triggerOrderModal} className="ml-2">
               Order Now
             </Button>
           </nav>
 
-          {/* Mobile Menu Toggle */}
-          <button
-            className="md:hidden text-foreground hover:text-primary transition-colors"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            {isMobileMenuOpen ? <X className="w-8 h-8" /> : <Menu className="w-8 h-8" />}
-          </button>
+          {/* Mobile: theme toggle + hamburger */}
+          <div className="md:hidden flex items-center gap-3">
+            <ThemeToggle />
+            <button
+              className="text-foreground hover:text-primary transition-colors"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              {isMobileMenuOpen ? <X className="w-8 h-8" /> : <Menu className="w-8 h-8" />}
+            </button>
+          </div>
         </div>
       </header>
 
@@ -99,7 +104,7 @@ export function Navbar() {
                   <a
                     href={link.href}
                     onClick={(e) => handleNavClick(e, link.href)}
-                    className="block text-3xl font-display uppercase tracking-wider text-foreground hover:text-primary py-2 border-b border-white/5"
+                    className="block text-3xl font-display uppercase tracking-wider text-foreground hover:text-primary py-2 border-b border-border"
                   >
                     {link.name}
                   </a>
