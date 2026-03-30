@@ -9,22 +9,16 @@ const distDir = path.join(repoRoot, "artifacts", "panthers-bite", "dist");
 const vercelOutput = "/vercel/output";
 const staticDir = path.join(vercelOutput, "static");
 
-console.log("Building Panther's Bite...");
 console.log("Repo root:", repoRoot);
 
 execSync("pnpm --filter @workspace/panthers-bite run build", {
   stdio: "inherit",
   cwd: repoRoot,
-  env: { ...process.env },
 });
 
-console.log("Writing to Vercel Build Output API:", vercelOutput);
-
-if (existsSync(staticDir)) {
-  rmSync(staticDir, { recursive: true });
-}
+console.log("Copying to Build Output API:", staticDir);
+if (existsSync(staticDir)) rmSync(staticDir, { recursive: true });
 mkdirSync(staticDir, { recursive: true });
-
 cpSync(distDir, staticDir, { recursive: true });
 
 writeFileSync(
@@ -38,4 +32,4 @@ writeFileSync(
   }),
 );
 
-console.log("Done. Output written to", vercelOutput);
+console.log("Done. Files in:", staticDir);
