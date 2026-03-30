@@ -26,7 +26,7 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="max-w-2xl"
         >
-          <div className="inline-block px-4 py-1.5 rounded-full bg-white/5 border border-white/10 mb-6 backdrop-blur-sm">
+          <div className="inline-block px-4 py-1.5 rounded-full bg-white/5 border border-white/10 mb-6 backdrop-blur-sm mt-[15px]">
             <span className="text-primary font-bold tracking-widest text-sm uppercase">Kochi's Hardest Hitting Burgers</span>
           </div>
           
