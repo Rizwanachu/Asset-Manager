@@ -26,13 +26,13 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="max-w-2xl"
         >
-          <h1 className="text-6xl sm:text-7xl lg:text-8xl font-display uppercase leading-[0.9] mb-6 text-glow">
-            Unleash Your <span className="text-primary block mt-2">Hunger.</span>
-          </h1>
-
           <div className="inline-block px-4 py-1.5 rounded-full bg-white/5 border border-white/10 mb-6 backdrop-blur-sm">
             <span className="text-primary font-bold tracking-widest text-sm uppercase">Kochi's Hardest Hitting Burgers</span>
           </div>
+          
+          <h1 className="text-6xl sm:text-7xl lg:text-8xl font-display uppercase leading-[0.9] mb-6 text-glow">
+            Unleash Your <span className="text-primary block mt-2">Hunger.</span>
+          </h1>
           
           <p className="text-lg sm:text-xl text-muted-foreground mb-10 max-w-lg font-medium leading-relaxed">
             Signature smashed burgers, dangerously loaded fries, and bold American flavors that refuse to apologize.
