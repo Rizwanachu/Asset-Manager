@@ -31,7 +31,6 @@ export function Hero() {
           className="max-w-2xl text-center sm:text-left mx-auto sm:mx-0"
         >
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-[#E94E77]/30 mb-4 sm:mb-6 backdrop-blur-sm mt-[20px]">
-            <span className="text-lg leading-none">🐾</span>
             <span className="text-primary font-bold tracking-widest text-xs sm:text-sm uppercase">Kochi's Hardest Hitting Burgers</span>
           </div>
 
@@ -41,7 +40,7 @@ export function Hero() {
 
           {/* Fun microcopy */}
           <p className="text-xs sm:text-sm font-bold uppercase tracking-[0.2em] text-primary/70 mb-4 sm:mb-6">
-            ⚠️ Warning: seriously addictive burgers
+            Warning: seriously addictive burgers
           </p>
 
           <p className="text-base sm:text-lg lg:text-xl text-muted-foreground mb-8 sm:mb-10 max-w-lg mx-auto sm:mx-0 font-medium leading-relaxed">

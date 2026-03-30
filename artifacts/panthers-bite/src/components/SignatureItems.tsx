@@ -9,7 +9,7 @@ const items = [
     description: "Double smashed patties, melted pepper jack, fresh jalapeños, and our blazing hot panther sauce on a toasted brioche.",
     image: "images/spicy-burger.png",
     price: "₹349",
-    tag: "🔥 Most ordered"
+    tag: "Most ordered"
   },
   {
     id: "classic-smash",
@@ -17,7 +17,7 @@ const items = [
     description: "The OG. Double beef, double american cheese, house pickles, diced onions, and classic sauce. Pure perfection.",
     image: "images/classic-burger.png",
     price: "₹299",
-    tag: "🐾 The original"
+    tag: "The original"
   },
   {
     id: "beast-fries",
@@ -25,7 +25,7 @@ const items = [
     description: "A ridiculous portion of crinkle cuts absolutely buried in molten cheese sauce, seasoned ground beef, and scallions.",
     image: "images/loaded-fries.png",
     price: "₹249",
-    tag: "😤 No sharing allowed"
+    tag: "No sharing allowed"
   }
 ];
 
@@ -41,7 +41,7 @@ export function SignatureItems() {
           className="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-10 sm:mb-16 gap-4 sm:gap-6"
         >
           <div>
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary mb-3">🐾 Fan favourites</p>
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary mb-3">Fan favourites</p>
             <h2 className="text-4xl sm:text-5xl md:text-6xl font-display text-foreground mb-4">Signature Hits</h2>
             <div className="w-24 h-1.5 bg-gradient-to-r from-[#E94E77] to-[#FF8FB1] rounded-full" />
           </div>

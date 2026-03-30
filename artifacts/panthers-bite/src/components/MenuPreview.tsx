@@ -7,21 +7,21 @@ const categories = [
     title: "Smashed Burgers",
     description: "Double beef, crispy edges, melted cheese, and our signature panther sauce.",
     icon: <Flame className="w-10 h-10 text-primary" />,
-    microcopy: "The one that started it all 🔥"
+    microcopy: "The one that started it all"
   },
   {
     id: "wraps",
     title: "Bold Wraps",
     description: "Crispy chicken or tender paneer wrapped tight with intense flavors and crunch.",
     icon: <Zap className="w-10 h-10 text-primary" />,
-    microcopy: "Crispy. Messy. Perfect. ⚡"
+    microcopy: "Crispy. Messy. Perfect."
   },
   {
     id: "fries",
     title: "Loaded Fries",
     description: "A mountain of fries drowned in cheese, meats, and unapologetic toppings.",
     icon: <Utensils className="w-10 h-10 text-primary" />,
-    microcopy: "You will not share these 😤"
+    microcopy: "You will not share these"
   }
 ];
 
@@ -38,7 +38,7 @@ export function MenuPreview() {
           viewport={{ once: true }}
           className="text-center mb-12 sm:mb-16"
         >
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary mb-3">🐾 Bite into madness</p>
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary mb-3">Bite into madness</p>
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-display text-foreground mb-4">Our Menu</h2>
           <div className="w-24 h-1.5 bg-gradient-to-r from-[#E94E77] to-[#FF8FB1] mx-auto rounded-full" />
         </motion.div>

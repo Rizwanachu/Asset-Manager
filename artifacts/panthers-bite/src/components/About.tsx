@@ -16,7 +16,7 @@ export function About() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary mb-3">🐾 Our story</p>
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary mb-3">Our story</p>
             <h2 className="text-4xl sm:text-5xl md:text-6xl font-display text-primary mb-6">The Story</h2>
             <p className="text-base sm:text-lg text-foreground/90 leading-relaxed mb-6">
               Panther's Bite serves bold American-style fast food with intense flavors. We believe every bite should hit hard.
