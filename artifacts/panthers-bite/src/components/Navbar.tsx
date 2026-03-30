@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import logoImg from "@assets/587607695_17853646149595354_2885004091992565856_n_(1)_1774904811848.png";
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -48,10 +49,8 @@ export function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
           
           {/* Logo */}
-          <a href="#home" onClick={(e) => handleNavClick(e, '#home')} className="flex items-center gap-2 group">
-            <span className="font-display text-2xl tracking-widest text-foreground group-hover:text-primary transition-colors">
-              PANTHER'S BITE
-            </span>
+          <a href="#home" onClick={(e) => handleNavClick(e, '#home')} className="flex items-center group">
+            <img src={logoImg} alt="Panther's Bite" className="h-14 w-auto object-contain" />
           </a>
 
           {/* Desktop Nav */}

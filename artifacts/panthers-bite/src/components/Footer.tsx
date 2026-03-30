@@ -1,4 +1,5 @@
 import { Instagram } from "lucide-react";
+import logoImg from "@assets/587607695_17853646149595354_2885004091992565856_n_(1)_1774904811848.png";
 
 export function Footer() {
   return (
@@ -8,10 +9,8 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           
           <div className="md:col-span-2">
-            <div className="flex items-center gap-2 mb-6">
-              <span className="font-display text-3xl tracking-widest text-foreground">
-                PANTHER'S BITE
-              </span>
+            <div className="flex items-center mb-6">
+              <img src={logoImg} alt="Panther's Bite" className="h-24 w-auto object-contain" />
             </div>
             <p className="text-muted-foreground max-w-sm leading-relaxed mb-8">
               Kochi's premier destination for bold, unapologetic American-style fast food. Smashed burgers, loaded fries, and intense flavors.
