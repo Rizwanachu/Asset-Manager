@@ -1,0 +1,23 @@
+packages:
+  "framer-motion": "For smooth scroll reveals, hero animations, and interactive component states."
+  "clsx": "Utility for constructing className strings conditionally."
+  "tailwind-merge": "Utility to safely merge Tailwind classes."
+
+images:
+  - path: "artifacts/panthers-bite/public/images/hero-bg.png"
+    description: "Ultra high quality dark moody food photography of a massive smashed double cheeseburger with melting cheese and dripping sauce. Placed on a dark slate surface with cinematic warm gold rim lighting. High contrast, deep blacks, negative space on the left."
+    aspect_ratio: "16:9"
+  - path: "artifacts/panthers-bite/public/images/spicy-burger.png"
+    description: "Close up dark moody photography of a spicy double smash burger loaded with jalapeños, melted pepper jack cheese, and red hot sauce. Deep black background, cinematic warm directional lighting."
+    aspect_ratio: "1:1"
+  - path: "artifacts/panthers-bite/public/images/classic-burger.png"
+    description: "Close up dark moody photography of a classic American smash burger with crispy lacy meat edges, bright yellow melted american cheese, pickles, and house sauce. Deep black background, cinematic lighting."
+    aspect_ratio: "1:1"
+  - path: "artifacts/panthers-bite/public/images/loaded-fries.png"
+    description: "Close up dark moody photography of crinkle cut french fries absolutely loaded and smothered in melted cheese sauce, crumbled seasoned beef, and scallions. Dark slate background, cinematic warm lighting."
+    aspect_ratio: "1:1"
+
+notes:
+  - Single page application using smooth scrolling to section IDs.
+  - Using a dark and aggressive brand aesthetic with Gold (#FFD700) and Deep Black (#0B0B0B).
+  - Using framer-motion for intersection observer animations.

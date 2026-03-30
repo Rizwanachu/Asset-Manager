@@ -1,0 +1,147 @@
+Act as a senior full-stack developer and award-winning UI/UX designer.
+
+Build a modern, high-converting fast food restaurant website for a brand called "Panther's Bite".
+
+Tech stack:
+- Next.js (App Router)
+- Tailwind CSS
+- Fully responsive
+- Optimized for Vercel deployment
+- Clean, production-ready code
+
+Brand identity:
+- Theme: Dark, bold, premium fast food
+- Colors:
+  - Primary: #0B0B0B (deep black)
+  - Accent: #FFD700 (gold/yellow)
+  - Secondary: #1A1A1A
+  - Text: white / light gray
+- Style: aggressive, sleek, modern, high-energy
+
+Goal of the website:
+- Increase walk-in customers
+- Drive online orders via external platforms (Zomato / Swiggy)
+- Build strong brand presence
+- Push Instagram engagement
+
+Pages / Sections:
+
+1. HOME PAGE (single page layout with sections)
+------------------------------------------------
+
+Hero Section:
+- Full-screen background (dark food aesthetic or burger image)
+- Headline: "Unleash Your Hunger."
+- Subtext: "Signature burgers, loaded fries, and bold American flavors."
+- CTA buttons:
+  - "Order Now"
+  - "Visit Us"
+- Add subtle animation (fade-in + parallax)
+
+Sticky Navbar:
+- Logo (Panther's Bite)
+- Links: Home, Menu, About, Reviews, Contact
+- "Order Now" button highlighted
+
+Menu Preview Section:
+- Cards for:
+  - Burgers
+  - Wraps
+  - Loaded Fries
+- Each card has image, title, short description
+- Hover animation
+
+About Section:
+- Short brand story:
+  "Panther's Bite serves bold American-style fast food with intense flavors..."
+- Emphasize:
+  - Taste
+  - Portions
+  - Experience
+
+Signature Items Section:
+- Highlight:
+  - Spicy 2X Burger
+  - Signature Burgers
+  - Loaded Fries
+- Add glowing hover effects
+
+Reviews Section:
+- Slider with customer reviews:
+  - "The food was tasty, portions were solid..."
+  - "Spicy 2X burger is a must try"
+  - "Highly recommend their burgers and loaded fries"
+- Star ratings (4.9 style UI)
+
+Instagram Section:
+- Grid layout (mock images)
+- CTA: "Follow us on Instagram"
+- Link to: https://www.instagram.com/panthersbite/
+
+Location Section:
+- Embedded Google Map
+- Address:
+  "Panther's Bite, Urban Flavour Food Street, Cheriyakadavanthra, Kochi"
+- Phone number clickable
+
+Footer:
+- Social links
+- Quick links
+- Opening hours (till 12 AM)
+- Copyright
+
+------------------------------------------------
+
+2. FLOATING BUTTONS
+------------------------------------------------
+- WhatsApp button (bottom right)
+- "Order Now" floating CTA
+- Mobile-friendly
+
+------------------------------------------------
+
+3. ORDER NOW BUTTON BEHAVIOR
+------------------------------------------------
+When clicked, show modal with:
+- "Order via:"
+  - Zomato (button)
+  - Swiggy (button)
+
+------------------------------------------------
+
+4. DESIGN DETAILS
+------------------------------------------------
+- Use smooth scrolling
+- Add subtle hover animations everywhere
+- Rounded cards (2xl)
+- Soft shadows
+- Glassmorphism in navbar (slight blur)
+
+------------------------------------------------
+
+5. PERFORMANCE
+------------------------------------------------
+- Optimize images
+- Lazy loading
+- Fast loading under 2 seconds
+
+------------------------------------------------
+
+6. SEO
+------------------------------------------------
+- Title: "Panther's Bite | Best Burgers in Kochi"
+- Meta description:
+  "Panther's Bite serves bold American-style burgers, wraps, and loaded fries in Kochi. Visit us or order online."
+
+------------------------------------------------
+
+7. FINAL TOUCH
+------------------------------------------------
+Make it look like a premium ₹5L agency-built website.
+
+Clean code structure:
+- components/
+- sections/
+- app/
+
+Add comments in code for easy editing.

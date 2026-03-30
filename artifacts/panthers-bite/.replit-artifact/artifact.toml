@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Panther's Bite"
+version = "1.0.0"
+id = "artifacts/panthers-bite"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 18766
+
+[services.development]
+run = "pnpm --filter @workspace/panthers-bite run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/panthers-bite", "run", "build" ]
+publicDir = "artifacts/panthers-bite/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "18766"
+BASE_PATH = "/"
