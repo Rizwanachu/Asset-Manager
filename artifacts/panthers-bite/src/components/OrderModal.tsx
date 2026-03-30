@@ -39,7 +39,7 @@ export function OrderModal() {
             initial={{ opacity: 0, scale: 0.95, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
-            className="relative w-full max-w-md bg-card border-2 border-primary/50 rounded-3xl p-8 shadow-[0_0_50px_rgba(255,215,0,0.15)]"
+            className="relative w-full max-w-md bg-card border-2 border-primary/50 rounded-3xl p-8 shadow-[0_0_50px_rgba(157,73,117,0.15)]"
           >
             <button 
               onClick={close}
