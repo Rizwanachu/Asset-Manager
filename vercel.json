@@ -1,5 +1,5 @@
 {
-  "buildCommand": "pnpm --filter @workspace/panthers-bite run build && cp -r artifacts/panthers-bite/dist vercel-output",
+  "buildCommand": "pnpm --filter @workspace/panthers-bite run build",
   "outputDirectory": "vercel-output",
   "installCommand": "pnpm install",
   "framework": null,
