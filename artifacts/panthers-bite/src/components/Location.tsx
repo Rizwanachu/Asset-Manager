@@ -50,8 +50,8 @@ export function Location() {
                 </div>
                 <div>
                   <h4 className="text-xl font-display uppercase mb-2">Hit Us Up</h4>
-                  <a href="tel:+919999999999" className="text-xl text-muted-foreground hover:text-primary transition-colors">
-                    +91 99999 99999
+                  <a href="tel:+919947178091" className="text-xl text-muted-foreground hover:text-primary transition-colors">
+                    +91 99471 78091
                   </a>
                 </div>
               </div>

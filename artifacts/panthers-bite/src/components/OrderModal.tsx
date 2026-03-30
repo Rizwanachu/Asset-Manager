@@ -55,7 +55,7 @@ export function OrderModal() {
 
             <div className="space-y-4">
               <a 
-                href="#"
+                href="https://www.zomato.com/kochi/panthers-bite-thevara"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full flex items-center justify-between p-6 bg-red-500/10 hover:bg-red-500/20 border border-red-500/30 rounded-2xl transition-all group"
@@ -68,7 +68,7 @@ export function OrderModal() {
               </a>
 
               <a 
-                href="#"
+                href="https://www.swiggy.com/city/kochi/panthers-bite-panampilly-nagar-rest1271430"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full flex items-center justify-between p-6 bg-orange-500/10 hover:bg-orange-500/20 border border-orange-500/30 rounded-2xl transition-all group"
@@ -83,8 +83,8 @@ export function OrderModal() {
 
             <div className="mt-8 pt-6 border-t border-white/10 text-center">
               <p className="text-sm text-muted-foreground mb-4">Or pickup from store directly</p>
-              <a href="tel:+919999999999" className="text-primary font-bold tracking-wider hover:underline">
-                Call +91 99999 99999
+              <a href="tel:+919947178091" className="text-primary font-bold tracking-wider hover:underline">
+                Call +91 99471 78091
               </a>
             </div>
           </motion.div>

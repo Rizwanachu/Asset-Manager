@@ -24,10 +24,10 @@ export function Footer() {
               <a href="#" className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center text-foreground hover:bg-primary hover:text-black transition-colors">
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="#" className="h-12 px-4 rounded-full bg-secondary flex items-center justify-center text-sm font-bold uppercase tracking-wider text-foreground hover:bg-red-500 transition-colors">
+              <a href="https://www.zomato.com/kochi/panthers-bite-thevara" target="_blank" rel="noopener noreferrer" className="h-12 px-4 rounded-full bg-secondary flex items-center justify-center text-sm font-bold uppercase tracking-wider text-foreground hover:bg-red-500 transition-colors">
                 Zomato
               </a>
-              <a href="#" className="h-12 px-4 rounded-full bg-secondary flex items-center justify-center text-sm font-bold uppercase tracking-wider text-foreground hover:bg-orange-500 transition-colors">
+              <a href="https://www.swiggy.com/city/kochi/panthers-bite-panampilly-nagar-rest1271430" target="_blank" rel="noopener noreferrer" className="h-12 px-4 rounded-full bg-secondary flex items-center justify-center text-sm font-bold uppercase tracking-wider text-foreground hover:bg-orange-500 transition-colors">
                 Swiggy
               </a>
             </div>
@@ -47,7 +47,7 @@ export function Footer() {
             <h4 className="font-display text-xl uppercase mb-6">Contact</h4>
             <ul className="space-y-4">
               <li className="text-muted-foreground">Urban Flavour Food Street,<br/>Cheriyakadavanthra</li>
-              <li><a href="tel:+919999999999" className="text-muted-foreground hover:text-primary transition-colors">+91 99999 99999</a></li>
+              <li><a href="tel:+919947178091" className="text-muted-foreground hover:text-primary transition-colors">+91 99471 78091</a></li>
               <li className="text-muted-foreground mt-4">Daily: 12 PM - 12 AM</li>
             </ul>
           </div>
