@@ -32,10 +32,7 @@ export function Navbar() {
     const element = document.querySelector(href);
     if (element) {
       const offsetTop = element.getBoundingClientRect().top + window.scrollY - 80;
-      window.scrollTo({
-        top: offsetTop,
-        behavior: "smooth"
-      });
+      window.scrollTo({ top: offsetTop, behavior: "smooth" });
     }
   };
 
@@ -43,11 +40,13 @@ export function Navbar() {
     <>
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled ? "bg-background/90 backdrop-blur-md border-b border-border py-3" : "bg-transparent py-5"
+          isScrolled
+            ? "bg-[#0f0f0f]/90 backdrop-blur-md border-b border-[#E94E77]/15 py-3 shadow-[0_4px_30px_rgba(233,78,119,0.08)]"
+            : "bg-transparent py-5"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-          
+
           {/* Logo */}
           <a href="#home" onClick={(e) => handleNavClick(e, '#home')} className="flex items-center group">
             <img src={logoImg} alt="Panther's Bite" className="h-14 w-auto object-contain" />
@@ -61,9 +60,10 @@ export function Navbar() {
                   <a
                     href={link.href}
                     onClick={(e) => handleNavClick(e, link.href)}
-                    className="text-sm font-semibold uppercase tracking-wider text-muted-foreground hover:text-primary transition-colors duration-200"
+                    className="text-sm font-semibold uppercase tracking-wider text-muted-foreground hover:text-primary transition-colors duration-200 relative group/link"
                   >
                     {link.name}
+                    <span className="absolute -bottom-0.5 left-0 w-0 h-0.5 bg-gradient-to-r from-[#E94E77] to-[#FF8FB1] rounded-full group-hover/link:w-full transition-all duration-300" />
                   </a>
                 </li>
               ))}
@@ -94,7 +94,7 @@ export function Navbar() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="fixed inset-0 z-40 bg-background/98 backdrop-blur-xl pt-24 px-6 flex flex-col items-center"
+            className="fixed inset-0 z-40 bg-[#0f0f0f]/98 backdrop-blur-xl pt-24 px-6 flex flex-col items-center"
           >
             <ul className="flex flex-col items-center gap-8 w-full">
               {navLinks.map((link) => (
@@ -102,7 +102,7 @@ export function Navbar() {
                   <a
                     href={link.href}
                     onClick={(e) => handleNavClick(e, link.href)}
-                    className="block text-3xl font-display uppercase tracking-wider text-foreground hover:text-primary py-2 border-b border-border"
+                    className="block text-3xl font-display uppercase tracking-wider text-foreground hover:text-primary py-2 border-b border-[#E94E77]/15 transition-colors"
                   >
                     {link.name}
                   </a>

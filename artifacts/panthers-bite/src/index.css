@@ -24,36 +24,36 @@
 }
 
 :root {
-  /* Dark Premium Theme */
-  --background: 0 0% 4%; /* #0B0B0B */
-  --foreground: 0 0% 98%; /* #FAFAFA */
-  
-  --card: 0 0% 10%; /* #1A1A1A */
+  /* Playful Premium Dark Theme */
+  --background: 0 0% 6%; /* #0F0F0F */
+  --foreground: 0 0% 98%;
+
+  --card: 0 0% 10%;
   --card-foreground: 0 0% 98%;
-  
+
   --popover: 0 0% 10%;
   --popover-foreground: 0 0% 98%;
-  
-  /* The Brand Accent */
-  --primary: 329 37% 45%; /* #9d4975 */
-  --primary-foreground: 0 0% 98%; /* White text on brand colour */
-  
-  --secondary: 0 0% 15%; /* #262626 */
+
+  /* #E94E77 — bold pink accent */
+  --primary: 344 78% 61%;
+  --primary-foreground: 0 0% 100%;
+
+  --secondary: 0 0% 14%;
   --secondary-foreground: 0 0% 98%;
-  
-  --muted: 0 0% 15%;
-  --muted-foreground: 0 0% 65%; /* #A6A6A6 */
-  
-  --accent: 329 37% 45%;
-  --accent-foreground: 0 0% 98%;
-  
+
+  --muted: 0 0% 14%;
+  --muted-foreground: 0 0% 62%;
+
+  --accent: 344 78% 61%;
+  --accent-foreground: 0 0% 100%;
+
   --destructive: 0 84% 60%;
   --destructive-foreground: 0 0% 98%;
-  
-  --border: 0 0% 20%; /* #333333 */
+
+  --border: 0 0% 20%;
   --input: 0 0% 20%;
-  --ring: 329 37% 45%;
-  
+  --ring: 344 78% 61%;
+
   --radius: 0.75rem;
 }
 
@@ -67,8 +67,8 @@
   --popover: 0 0% 92%;
   --popover-foreground: 0 0% 8%;
 
-  --primary: 329 37% 45%;
-  --primary-foreground: 0 0% 98%;
+  --primary: 344 78% 55%;
+  --primary-foreground: 0 0% 100%;
 
   --secondary: 0 0% 88%;
   --secondary-foreground: 0 0% 8%;
@@ -76,61 +76,73 @@
   --muted: 0 0% 88%;
   --muted-foreground: 0 0% 42%;
 
-  --accent: 329 37% 45%;
-  --accent-foreground: 0 0% 98%;
+  --accent: 344 78% 55%;
+  --accent-foreground: 0 0% 100%;
 
   --destructive: 0 84% 60%;
   --destructive-foreground: 0 0% 98%;
 
   --border: 0 0% 80%;
   --input: 0 0% 80%;
-  --ring: 329 37% 45%;
+  --ring: 344 78% 55%;
 }
 
 @layer base {
   * {
     @apply border-border;
   }
-  
+
   html {
     scroll-behavior: smooth;
   }
 
   body {
-    @apply bg-background text-foreground antialiased font-sans overflow-x-hidden;
-    /* Subtle noise texture for grit */
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+    @apply text-foreground antialiased font-sans overflow-x-hidden;
+    background-color: #0f0f0f;
+    background-image:
+      url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.025'/%3E%3C/svg%3E"),
+      radial-gradient(ellipse at top center, rgba(233, 78, 119, 0.07) 0%, transparent 65%);
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
-    @apply tracking-wide uppercase;
+    @apply tracking-wider uppercase;
+    letter-spacing: 0.06em;
   }
 
   /* Custom Scrollbar */
   ::-webkit-scrollbar {
-    width: 10px;
+    width: 8px;
   }
   ::-webkit-scrollbar-track {
-    background: hsl(var(--background));
+    background: #0f0f0f;
   }
   ::-webkit-scrollbar-thumb {
-    background: hsl(var(--border));
-    border-radius: 5px;
+    background: #2a2a2a;
+    border-radius: 4px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: hsl(var(--primary));
+    background: #E94E77;
   }
 }
 
 @layer utilities {
   .text-glow {
-    text-shadow: 0 0 20px hsla(329, 37%, 45%, 0.5);
+    text-shadow: 0 0 30px rgba(233, 78, 119, 0.55);
   }
   .box-glow {
-    box-shadow: 0 0 30px hsla(329, 37%, 45%, 0.15);
+    box-shadow: 0 0 40px rgba(233, 78, 119, 0.2);
+  }
+  .pink-glow {
+    box-shadow: 0 0 40px rgba(233, 78, 119, 0.2);
   }
   .glass-panel {
     @apply bg-card/80 backdrop-blur-md border border-white/5;
+  }
+  .btn-gradient {
+    background: linear-gradient(135deg, #E94E77 0%, #FF8FB1 100%);
+  }
+  .section-pink-glow {
+    background: radial-gradient(ellipse at center, rgba(233, 78, 119, 0.06) 0%, transparent 70%);
   }
 }

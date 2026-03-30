@@ -9,7 +9,6 @@ export function Hero() {
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent z-10" />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent z-10" />
-        {/* Extra overlay for mobile so text stays readable */}
         <div className="absolute inset-0 bg-background/50 sm:bg-transparent z-10" />
         <motion.img
           initial={{ scale: 1.1 }}
@@ -21,6 +20,9 @@ export function Hero() {
         />
       </div>
 
+      {/* Subtle pink radial glow behind content */}
+      <div className="absolute inset-0 z-0 pointer-events-none section-pink-glow" />
+
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center py-12 sm:py-0">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
@@ -28,13 +30,19 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="max-w-2xl text-center sm:text-left mx-auto sm:mx-0"
         >
-          <div className="inline-block px-4 py-1.5 rounded-full bg-white/5 border border-white/10 mb-4 sm:mb-6 backdrop-blur-sm mt-[20px]">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-[#E94E77]/30 mb-4 sm:mb-6 backdrop-blur-sm mt-[20px]">
+            <span className="text-lg leading-none">🐾</span>
             <span className="text-primary font-bold tracking-widest text-xs sm:text-sm uppercase">Kochi's Hardest Hitting Burgers</span>
           </div>
 
-          <h1 className="text-5xl sm:text-6xl lg:text-8xl font-display uppercase leading-[0.9] mb-4 sm:mb-6 text-glow">
+          <h1 className="text-5xl sm:text-6xl lg:text-8xl font-display uppercase leading-[0.9] mb-3 sm:mb-4 text-glow">
             Unleash Your <span className="text-primary block mt-2">Hunger.</span>
           </h1>
+
+          {/* Fun microcopy */}
+          <p className="text-xs sm:text-sm font-bold uppercase tracking-[0.2em] text-primary/70 mb-4 sm:mb-6">
+            ⚠️ Warning: seriously addictive burgers
+          </p>
 
           <p className="text-base sm:text-lg lg:text-xl text-muted-foreground mb-8 sm:mb-10 max-w-lg mx-auto sm:mx-0 font-medium leading-relaxed">
             Signature smashed burgers, dangerously loaded fries, and bold American flavors that refuse to apologize.
