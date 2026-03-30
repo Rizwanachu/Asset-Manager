@@ -9,14 +9,13 @@ export function Hero() {
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-background/30 z-10" />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent z-10" />
-        <div className="absolute inset-0 bg-background/60 sm:bg-transparent z-10" />
         <motion.img
           initial={{ scale: 1.1 }}
           animate={{ scale: 1 }}
           transition={{ duration: 1.5, ease: "easeOut" }}
           src={`${import.meta.env.BASE_URL}images/hero-bg.png`}
           alt="Panther's Bite"
-          className="w-full h-full object-cover object-center sm:object-right opacity-20 sm:opacity-40"
+          className="w-full h-full object-cover object-center sm:object-right opacity-50 sm:opacity-40"
         />
       </div>
       {/* Pink radial glow */}
