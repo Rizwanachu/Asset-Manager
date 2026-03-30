@@ -1,0 +1,196 @@
+Act as a senior frontend engineer and high-end UI/UX designer.
+
+You are working on an EXISTING Next.js + Tailwind CSS website for "Panther's Bite".
+
+DO NOT rebuild the project.
+DO NOT change the overall layout structure.
+
+Your task is to REFINE and ELEVATE the current design, branding, and conversion to a premium, agency-level standard.
+
+------------------------------------------------
+
+1. HERO SECTION IMPROVEMENT (CRITICAL)
+
+Problem:
+The hero visually communicates only burgers.
+
+Fix:
+- Keep current layout
+- Replace hero image with a multi-item composition:
+  (burger + loaded fries + chicken + combo feel)
+
+If multiple images are not available:
+- Layer 2–3 food images with absolute positioning
+- Add subtle floating animation
+
+Add overlay:
+- Soft gradient from black → transparent
+- Subtle pink glow (#E94E77)
+
+Enhance text:
+
+Heading:
+"Unleash Your Hunger"
+
+Subtext:
+"Loaded fries, crazy combos, juicy burgers and late-night cravings — all in one place."
+
+Add micro text:
+"Open till 12 AM in Kochi"
+
+------------------------------------------------
+
+2. VISUAL BRAND POLISH
+
+Goal:
+Align UI with playful pink brand while keeping premium feel.
+
+Changes:
+- Replace harsh black (#000) with #0F0F0F
+- Add subtle pink glow shadows across sections:
+  box-shadow: 0 0 40px rgba(233, 78, 119, 0.15)
+
+- Increase border-radius slightly (more friendly feel)
+- Soften shadows (less harsh, more diffused)
+
+------------------------------------------------
+
+3. MENU CARDS UPGRADE
+
+Enhance existing cards:
+
+Add small labels:
+- "Best Seller"
+- "Hot Pick"
+- "Must Try"
+
+Style:
+- Small pill badge
+- Pink background (#E94E77)
+- White text
+
+Add hover:
+- Slight scale (1.03)
+- Glow border
+
+Improve descriptions:
+Make them shorter, punchy, craving-focused.
+
+------------------------------------------------
+
+4. SIGNATURE ITEMS (MAKE THEM SELL)
+
+Keep layout, improve impact:
+
+- Increase price size
+- Color prices with #E94E77
+- Add stronger descriptions:
+  Example:
+  "Loaded, messy, and impossible to ignore"
+  "Crispy, saucy, and built for real hunger"
+
+Add hover effect:
+- Image zoom (scale 1.05)
+- Smooth transition
+
+------------------------------------------------
+
+5. COMBO SECTION (HIGH PRIORITY)
+
+Enhance "Best Combos" section:
+
+- Add one image per combo (if possible)
+- Add badge: "Most Ordered"
+
+Improve layout:
+- Increase card size slightly
+- Add hover glow
+
+Make price more prominent:
+- Bigger font
+- Accent color
+
+------------------------------------------------
+
+6. REVIEWS SECTION (TRUST BOOST)
+
+Upgrade current slider:
+
+Add:
+- Reviewer names (real-style)
+- Star rating visual (4.9 style)
+- Small text:
+  "Rated 4.9 by our customers"
+
+Improve typography:
+- Larger quote text
+- Better spacing
+
+------------------------------------------------
+
+7. INSTAGRAM SECTION (ENGAGEMENT)
+
+Enhance grid:
+
+Add hover overlay:
+- Dark transparent layer
+- Text: "View on Instagram"
+
+Add zoom effect:
+- scale(1.05) on hover
+
+Keep CTA:
+"Follow @panthersbite"
+
+------------------------------------------------
+
+8. FINAL CTA SECTION (CONVERSION BOOST)
+
+Improve bottom CTA:
+
+Heading:
+"Order Right Now"
+
+Add urgency line:
+"Open till midnight. Don't miss out."
+
+Buttons:
+- "Order on Zomato"
+- "Order on Swiggy"
+
+Style:
+- Large buttons
+- Gradient (#E94E77 → #FF8FB1)
+- Glow effect
+
+------------------------------------------------
+
+9. MICRO-INTERACTIONS
+
+Add across site:
+
+- Scroll animations (fade + slight upward motion)
+- Button hover glow
+- Card hover scale
+- Smooth transitions (300ms ease)
+
+------------------------------------------------
+
+10. PERFORMANCE
+
+- Keep images optimized
+- Use lazy loading
+- Do not break responsiveness
+
+------------------------------------------------
+
+FINAL GOAL:
+
+Transform the current site into a visually polished, high-converting fast food website that:
+
+- Clearly communicates variety (not just burgers)
+- Matches the playful pink brand identity
+- Feels premium and modern
+- Encourages immediate ordering
+
+Do all improvements within the existing codebase without restructuring the project.
