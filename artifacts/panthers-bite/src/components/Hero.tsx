@@ -15,7 +15,7 @@ export function Hero() {
           transition={{ duration: 1.5, ease: "easeOut" }}
           src={`${import.meta.env.BASE_URL}images/hero-bg.png`}
           alt="Panther's Bite"
-          className="w-full h-full object-cover object-center sm:object-right opacity-50 sm:opacity-40"
+          className="w-full h-full object-cover object-center sm:object-right opacity-20 sm:opacity-40"
         />
       </div>
       {/* Pink radial glow */}
