@@ -1,72 +1,64 @@
-import { defineConfig } from "vite";
+import { defineConfig, type UserConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import path from "path";
-import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
 import { mockupPreviewPlugin } from "./mockupPreviewPlugin";
 
+const isReplit = !!process.env.REPL_ID;
+
+// PORT is only required in Replit dev environment; default to 3000 for non-Replit builds
 const rawPort = process.env.PORT;
+const port = rawPort ? Number(rawPort) : 3000;
 
-if (!rawPort) {
-  throw new Error(
-    "PORT environment variable is required but was not provided.",
-  );
-}
+// BASE_PATH is only required in Replit; default to "/" for non-Replit builds
+const basePath = process.env.BASE_PATH ?? "/";
 
-const port = Number(rawPort);
+async function buildConfig(): Promise<UserConfig> {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const plugins: any[] = [mockupPreviewPlugin(), react(), tailwindcss()];
 
-if (Number.isNaN(port) || port <= 0) {
-  throw new Error(`Invalid PORT value: "${rawPort}"`);
-}
+  if (isReplit) {
+    const { default: runtimeErrorOverlay } = await import(
+      "@replit/vite-plugin-runtime-error-modal"
+    );
+    plugins.push(runtimeErrorOverlay());
 
-const basePath = process.env.BASE_PATH;
+    if (process.env.NODE_ENV !== "production") {
+      const { cartographer } = await import("@replit/vite-plugin-cartographer");
+      plugins.push(
+        cartographer({ root: path.resolve(import.meta.dirname, "..") }),
+      );
+    }
+  }
 
-if (!basePath) {
-  throw new Error(
-    "BASE_PATH environment variable is required but was not provided.",
-  );
-}
-
-export default defineConfig({
-  base: basePath,
-  plugins: [
-    mockupPreviewPlugin(),
-    react(),
-    tailwindcss(),
-    runtimeErrorOverlay(),
-    ...(process.env.NODE_ENV !== "production" &&
-    process.env.REPL_ID !== undefined
-      ? [
-          await import("@replit/vite-plugin-cartographer").then((m) =>
-            m.cartographer({
-              root: path.resolve(import.meta.dirname, ".."),
-            }),
-          ),
-        ]
-      : []),
-  ],
-  resolve: {
-    alias: {
-      "@": path.resolve(import.meta.dirname, "src"),
+  return {
+    base: basePath,
+    plugins,
+    resolve: {
+      alias: {
+        "@": path.resolve(import.meta.dirname, "src"),
+      },
     },
-  },
-  root: path.resolve(import.meta.dirname),
-  build: {
-    outDir: path.resolve(import.meta.dirname, "dist"),
-    emptyOutDir: true,
-  },
-  server: {
-    port,
-    host: "0.0.0.0",
-    allowedHosts: true,
-    fs: {
-      strict: true,
-      deny: ["**/.*"],
+    root: path.resolve(import.meta.dirname),
+    build: {
+      outDir: path.resolve(import.meta.dirname, "dist"),
+      emptyOutDir: true,
     },
-  },
-  preview: {
-    port,
-    host: "0.0.0.0",
-    allowedHosts: true,
-  },
-});
+    server: {
+      port,
+      host: "0.0.0.0",
+      allowedHosts: true,
+      fs: {
+        strict: true,
+        deny: ["**/.*"],
+      },
+    },
+    preview: {
+      port,
+      host: "0.0.0.0",
+      allowedHosts: true,
+    },
+  };
+}
+
+export default defineConfig(() => buildConfig());
