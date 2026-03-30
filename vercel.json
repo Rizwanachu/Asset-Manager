@@ -1,8 +1,5 @@
 {
-  "buildCommand": "pnpm -w run vercel-build",
+  "buildCommand": "REPO=$(dirname $(pnpm root -w)) && pnpm --filter @workspace/panthers-bite run build && mkdir -p /vercel/output/static && cp -r $REPO/artifacts/panthers-bite/dist/. /vercel/output/static/ && printf '{\"version\":3,\"routes\":[{\"handle\":\"filesystem\"},{\"src\":\"/(.*)\" ,\"dest\":\"/index.html\"}]}' > /vercel/output/config.json",
   "installCommand": "pnpm install",
-  "framework": null,
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
-  ]
+  "framework": null
 }
