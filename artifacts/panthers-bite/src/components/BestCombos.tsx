@@ -33,7 +33,7 @@ const combos = [
     description: "Any burger + Double Loaded Fries. Built for midnight hunger. No apologies.",
     price: "₹399",
     tag: "Open till 12 AM",
-    image: "images/loaded-fries.png"
+    image: "images/late-night-combo.png"
   }
 ];
 
