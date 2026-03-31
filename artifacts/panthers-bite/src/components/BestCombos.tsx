@@ -9,7 +9,7 @@ const combos = [
     description: "Classic Smash Burger + Loaded Fries + Soft Drink. The full experience.",
     price: "₹449",
     tag: "Most Ordered",
-    image: "images/classic-burger.png"
+    image: "images/panther-classic-combo.png"
   },
   {
     id: "spicy-duo",
