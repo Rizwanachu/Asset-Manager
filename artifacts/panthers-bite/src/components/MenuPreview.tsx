@@ -36,7 +36,7 @@ const categories = [
     icon: <Layers className="w-7 h-7 text-primary" />,
     microcopy: "Crispy. Messy. Perfect.",
     badge: null,
-    image: "images/hero-bg.png"
+    image: "images/wraps-snacks.png"
   },
   {
     id: "combos",
