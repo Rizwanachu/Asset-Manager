@@ -18,7 +18,7 @@ const categories = [
     icon: <Utensils className="w-7 h-7 text-primary" />,
     microcopy: "You will not share these",
     badge: "Must Try",
-    image: "images/loaded-fries.png"
+    image: "images/chicken-loaded-fries.png"
   },
   {
     id: "chicken",

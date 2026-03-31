@@ -42,3 +42,9 @@ id = "nIPPkYzVuJ6EdQdIjnjxe"
 uri = "file://artifacts/panthers-bite/public/images/late-night-combo.png"
 type = "image"
 title = "generated_image"
+
+[[generated]]
+id = "szFdFlAHD6IAG8Dczlvcd"
+uri = "file://artifacts/panthers-bite/public/images/chicken-loaded-fries.png"
+type = "image"
+title = "generated_image"
