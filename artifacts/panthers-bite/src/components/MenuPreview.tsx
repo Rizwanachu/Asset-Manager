@@ -27,7 +27,7 @@ const categories = [
     icon: <Drumstick className="w-7 h-7 text-primary" />,
     microcopy: "Crispy. Saucy. Built for real hunger",
     badge: "Hot Pick",
-    image: "images/classic-burger.png"
+    image: "images/chicken-wings.png"
   },
   {
     id: "wraps",
