@@ -6,41 +6,46 @@ const categories = [
     id: "burgers",
     title: "Signature Burgers",
     description: "Double-smashed, cheese-pulled, sauce-dripping. Burgers built for real hunger.",
-    icon: <Flame className="w-9 h-9 text-primary" />,
+    icon: <Flame className="w-7 h-7 text-primary" />,
     microcopy: "The one that started it all",
-    badge: "Best Seller"
+    badge: "Best Seller",
+    image: "images/spicy-burger.png"
   },
   {
     id: "fries",
     title: "Loaded Fries",
     description: "Crinkle cuts buried under molten cheese, meats, and sauces. Not diet food.",
-    icon: <Utensils className="w-9 h-9 text-primary" />,
+    icon: <Utensils className="w-7 h-7 text-primary" />,
     microcopy: "You will not share these",
-    badge: "Must Try"
+    badge: "Must Try",
+    image: "images/loaded-fries.png"
   },
   {
     id: "chicken",
     title: "Chicken Specials",
     description: "Crispy, juicy, fiery — chicken done the Panther's way.",
-    icon: <Drumstick className="w-9 h-9 text-primary" />,
+    icon: <Drumstick className="w-7 h-7 text-primary" />,
     microcopy: "Crispy. Saucy. Built for real hunger",
-    badge: "Hot Pick"
+    badge: "Hot Pick",
+    image: "images/classic-burger.png"
   },
   {
     id: "wraps",
     title: "Wraps & Snacks",
     description: "Stuffed wraps, bites, and snacks that hit hard every time.",
-    icon: <Layers className="w-9 h-9 text-primary" />,
+    icon: <Layers className="w-7 h-7 text-primary" />,
     microcopy: "Crispy. Messy. Perfect.",
-    badge: null
+    badge: null,
+    image: "images/hero-bg.png"
   },
   {
     id: "combos",
     title: "Combos & Meals",
     description: "More food, better value. Full meals built for maximum cravings.",
-    icon: <Gift className="w-9 h-9 text-primary" />,
+    icon: <Gift className="w-7 h-7 text-primary" />,
     microcopy: "Messy. Loaded. Worth it.",
-    badge: "Best Value"
+    badge: "Best Value",
+    image: "images/classic-burger.png"
   }
 ];
 
@@ -70,27 +75,39 @@ export function MenuPreview() {
               viewport={{ once: true }}
               transition={{ delay: index * 0.08 }}
               whileHover={{ scale: 1.03, y: -6 }}
-              className="w-full sm:w-[calc(50%-16px)] lg:w-[calc(33.333%-22px)] glass-panel p-6 sm:p-8 rounded-3xl group border border-white/5 hover:border-[#E94E77]/50 transition-colors duration-300 cursor-pointer shadow-[0_0_0_0_rgba(233,78,119,0)] hover:shadow-[0_0_40px_rgba(233,78,119,0.15)]"
+              className="w-full sm:w-[calc(50%-16px)] lg:w-[calc(33.333%-22px)] glass-panel rounded-3xl group border border-white/5 hover:border-[#E94E77]/50 transition-colors duration-300 cursor-pointer hover:shadow-[0_0_40px_rgba(233,78,119,0.15)] overflow-hidden flex flex-col"
               onClick={() => document.getElementById('signature')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              {/* Badge + icon row */}
-              <div className="flex items-start justify-between mb-5">
-                <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-secondary flex items-center justify-center group-hover:bg-[#E94E77]/10 transition-colors">
-                  {category.icon}
-                </div>
+              {/* Image */}
+              <div className="relative h-44 shrink-0 overflow-hidden bg-secondary">
+                <img
+                  src={`${import.meta.env.BASE_URL}${category.image}`}
+                  alt={category.title}
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-90"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                 {category.badge && (
-                  <span className="text-[10px] font-bold uppercase tracking-widest text-white bg-[#E94E77] px-2.5 py-1 rounded-full shadow-[0_0_12px_rgba(233,78,119,0.5)]">
+                  <span className="absolute top-3 left-3 text-[10px] font-bold uppercase tracking-widest text-white bg-[#E94E77] px-2.5 py-1 rounded-full shadow-[0_0_12px_rgba(233,78,119,0.5)]">
                     {category.badge}
                   </span>
                 )}
               </div>
 
-              <h3 className="text-xl sm:text-2xl font-display mb-2">{category.title}</h3>
-              <p className="text-muted-foreground leading-relaxed text-sm mb-3">{category.description}</p>
-              <p className="text-xs text-primary/70 font-semibold mb-4 italic">{category.microcopy}</p>
+              {/* Content */}
+              <div className="p-5 sm:p-6 flex flex-col flex-1">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-9 h-9 rounded-xl bg-secondary flex items-center justify-center group-hover:bg-[#E94E77]/10 transition-colors shrink-0">
+                    {category.icon}
+                  </div>
+                  <h3 className="text-lg sm:text-xl font-display">{category.title}</h3>
+                </div>
+                <p className="text-muted-foreground leading-relaxed text-sm mb-2">{category.description}</p>
+                <p className="text-xs text-primary/70 font-semibold mb-4 italic">{category.microcopy}</p>
 
-              <div className="flex items-center text-primary font-bold uppercase tracking-wider text-sm group-hover:translate-x-2 transition-transform">
-                Explore <span className="ml-2">→</span>
+                <div className="flex items-center text-primary font-bold uppercase tracking-wider text-sm group-hover:translate-x-2 transition-transform mt-auto">
+                  Explore <span className="ml-2">→</span>
+                </div>
               </div>
             </motion.div>
           ))}
