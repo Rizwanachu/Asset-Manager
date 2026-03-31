@@ -24,3 +24,9 @@ id = "mYZNdXqWA6m2ZwzsixmEw"
 uri = "file://artifacts/panthers-bite/public/images/panther-classic-combo.png"
 type = "image"
 title = "generated_image"
+
+[[generated]]
+id = "cAFj4efGGGMALFIOPX-_O"
+uri = "file://artifacts/panthers-bite/public/images/spicy-duo-combo.png"
+type = "image"
+title = "generated_image"

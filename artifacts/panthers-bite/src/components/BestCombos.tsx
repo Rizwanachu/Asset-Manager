@@ -17,7 +17,7 @@ const combos = [
     description: "Spicy 2X Burger + Chilli Cheese Fries + Drink. For those who like it hot.",
     price: "₹499",
     tag: "Crowd Favourite",
-    image: "images/spicy-burger.png"
+    image: "images/spicy-duo-combo.png"
   },
   {
     id: "chicken-feast",
