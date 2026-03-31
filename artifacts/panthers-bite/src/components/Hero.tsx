@@ -7,9 +7,20 @@ export function Hero() {
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Background & gradient overlays */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 lg:via-background/90 to-background/30 lg:to-transparent z-10" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background/80 lg:from-background via-transparent to-transparent z-10" />
-        <div className="absolute inset-0 bg-background/60 sm:bg-transparent z-10 opacity-50 sm:opacity-100" />
+        {/* Mobile/tablet gradient */}
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-background/30 z-10 lg:hidden" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent z-10 lg:hidden" />
+        <div className="absolute inset-0 bg-background/60 sm:bg-transparent z-10 opacity-50 sm:opacity-100 lg:hidden" />
+        {/* Desktop gradient — precise left-only fade, right side fully clean */}
+        <div
+          className="absolute inset-0 z-10 pointer-events-none hidden lg:block"
+          style={{ background: "linear-gradient(to right, #0f0f0f 0%, #0f0f0f 20%, rgba(15,15,15,0.85) 38%, rgba(15,15,15,0.2) 52%, transparent 65%)" }}
+        />
+        {/* Desktop bottom fade */}
+        <div
+          className="absolute inset-0 z-10 pointer-events-none hidden lg:block"
+          style={{ background: "linear-gradient(to top, rgba(15,15,15,0.7) 0%, transparent 35%)" }}
+        />
         <motion.img
           initial={{ scale: 1.1 }}
           animate={{ scale: 1 }}
