@@ -14,7 +14,7 @@ export function Hero() {
         {/* Desktop gradient — precise left-only fade, right side fully clean */}
         <div
           className="absolute inset-0 z-10 pointer-events-none hidden lg:block"
-          style={{ background: "linear-gradient(to right, #0f0f0f 0%, #0f0f0f 35%, rgba(15,15,15,0.9) 48%, rgba(15,15,15,0.3) 60%, transparent 72%)" }}
+          style={{ background: "linear-gradient(to right, #0f0f0f 0%, #0f0f0f 42%, rgba(15,15,15,0.95) 54%, rgba(15,15,15,0.5) 65%, transparent 78%)" }}
         />
         {/* Desktop bottom fade */}
         <div
