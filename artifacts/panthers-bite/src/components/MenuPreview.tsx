@@ -45,7 +45,7 @@ const categories = [
     icon: <Gift className="w-7 h-7 text-primary" />,
     microcopy: "Messy. Loaded. Worth it.",
     badge: "Best Value",
-    image: "images/classic-burger.png"
+    image: "images/combo-meal.png"
   }
 ];
 
