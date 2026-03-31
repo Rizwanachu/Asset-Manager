@@ -21,6 +21,11 @@ export function Hero() {
       </div>
       {/* Pink radial glow */}
       <div className="absolute inset-0 z-0 pointer-events-none section-pink-glow" />
+      {/* Warm amber glow — desktop only, right side */}
+      <div
+        className="absolute inset-0 z-0 pointer-events-none hidden lg:block"
+        style={{ background: "radial-gradient(ellipse 60% 70% at 85% 50%, rgba(210, 140, 30, 0.35) 0%, rgba(180, 100, 20, 0.12) 50%, transparent 75%)" }}
+      />
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex items-center py-12 sm:py-0 min-h-screen">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
