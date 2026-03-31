@@ -25,7 +25,7 @@ const combos = [
     description: "Crispy Chicken Special + Beast Fries + Drink. Crispy all the way through.",
     price: "₹429",
     tag: "Fan Pick",
-    image: "images/classic-burger.png"
+    image: "images/chicken-feast-combo.png"
   },
   {
     id: "late-night",
